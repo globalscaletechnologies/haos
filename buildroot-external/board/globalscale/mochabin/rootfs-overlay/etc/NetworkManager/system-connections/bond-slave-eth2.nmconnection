@@ -1,0 +1,11 @@
+[connection]
+id=bond-slave-eth2
+uuid=fd3f7aed-3785-422c-8b32-8017d9c8c173
+type=ethernet
+interface-name=eth2
+master=bond0
+slave-type=bond
+
+[ethernet]
+
+[bond-port]

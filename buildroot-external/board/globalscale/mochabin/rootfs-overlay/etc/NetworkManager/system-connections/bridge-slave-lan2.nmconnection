@@ -1,0 +1,11 @@
+[connection]
+id=bridge-slave-lan2
+uuid=cde6ecf7-5d43-4cda-a00c-24aaa52df018
+type=ethernet
+interface-name=lan2
+master=br0
+slave-type=bridge
+
+[ethernet]
+
+[bridge-port]

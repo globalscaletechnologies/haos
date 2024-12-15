@@ -1,0 +1,8 @@
+#!/usr/bin/bash -e
+case "$2" in
+    up)
+        if [[ "$1" = "eth1" ]]; then
+            ip link set dev $1 promisc on
+        fi
+        ;;
+esac
