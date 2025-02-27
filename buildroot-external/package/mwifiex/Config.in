@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MWIFIEX
+	tristate "NXP MXM Wi-Fi Driver"
+	depends on BR2_LINUX_KERNEL
+	---help---
+	  Driver for MXM Wi-Fi Driver.
