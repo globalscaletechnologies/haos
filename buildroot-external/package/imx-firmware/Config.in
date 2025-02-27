@@ -1,0 +1,58 @@
+config BR2_PACKAGE_IMX_FIRMWARE
+	bool "imx-firmware"
+	depends on BR2_arm || BR2_aarch64
+	help
+	  BSP firmware - Bluetooth and WiFi
+
+	  Pre-compiled binaries of the current Bluetooth and WiFi firmware
+
+	  https://github.com/nxp-imx/imx-firmware
+
+if BR2_PACKAGE_IMX_FIRMWARE
+
+config BR2_PACKAGE_IMX_FIRMWARE_8801_SD
+	bool "NXP 8801 SD WiFi firmware"
+	help
+	  NXP 8801 SD WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_8987_SD
+	bool "NXP 8987 SD WiFi firmware"
+	help
+	  NXP 8987 SD WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_8997_PCIE
+	bool "NXP 8997 PCIE WiFi firmware"
+	help
+	  NXP 8997 PCIE WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_8997_SD
+	bool "NXP 8997 SD WiFi firmware"
+	help
+	  NXP 8997 SD WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_9098_PCIE
+	bool "NXP 9098 PCIE WiFi firmware"
+	help
+	  NXP 9098 PCIE WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_9098_SD
+	bool "NXP 9098 SD WiFi firmware"
+	help
+	  NXP 9098 SD WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_IW416_SD
+	bool "NXP IW416 SD WiFi firmware"
+	help
+	  NXP IW416 SD WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_IW612_SD
+	bool "NXP IW612 SD WiFi firmware"
+	help
+	  NXP IW612 SD WiFi firmware
+
+config BR2_PACKAGE_IMX_FIRMWARE_CONFIG_FILE
+	bool "The wifi configuration for MWIFIEX"
+	help
+	  NXP WiFi config file for driver
+
+endif # BR2_PACKAGE_IMX_FIRMWARE
