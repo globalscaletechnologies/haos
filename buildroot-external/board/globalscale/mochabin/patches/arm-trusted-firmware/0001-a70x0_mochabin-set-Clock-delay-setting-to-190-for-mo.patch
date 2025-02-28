@@ -1,0 +1,58 @@
+From 6a776bc003fff00adfe143d9409033771bd9af53 Mon Sep 17 00:00:00 2001
+From: Jason Hung <jhung@globalscaletechnologies.com>
+Date: Sun, 24 Nov 2024 19:39:56 +0800
+Subject: [PATCH] a70x0_mochabin: set Clock delay setting to 190 for mochabin
+ hw-v1-5-0
+
+set Clock delay setting to 190 for mochabin hw v1-5-0 to fix
+ddr training fail issue.
+---
+ .../a8k/a70x0_mochabin/board/dram_port.c       | 18 +++++++++++++++---
+ 1 file changed, 15 insertions(+), 3 deletions(-)
+
+diff --git a/plat/marvell/armada/a8k/a70x0_mochabin/board/dram_port.c b/plat/marvell/armada/a8k/a70x0_mochabin/board/dram_port.c
+index 68d335b63..834744b85 100644
+--- a/plat/marvell/armada/a8k/a70x0_mochabin/board/dram_port.c
++++ b/plat/marvell/armada/a8k/a70x0_mochabin/board/dram_port.c
+@@ -84,7 +84,11 @@ static struct mv_ddr_topology_map board_topology_map_2g = {
+ 			MV_DDR_ODT_CFG_ALWAYS_ON,	/* odtcfg_write */
+ 			MV_DDR_ODT_CFG_NORMAL,		/* odtcfg_read */
+ 		},
+-	}
++	},
++	{0},	/* electrical parameters */
++	0,		/* ODT configuration */
++	0,		/* Clock enable mask */
++	190		/* Clock delay */
+ };
+ #endif
+ 
+@@ -146,7 +150,11 @@ static struct mv_ddr_topology_map board_topology_map_4g = {
+ 			MV_DDR_ODT_CFG_ALWAYS_ON,	/* odtcfg_write */
+ 			MV_DDR_ODT_CFG_NORMAL,		/* odtcfg_read */
+ 		},
+-	}
++	},
++	{0},	/* electrical parameters */
++	0,		/* ODT configuration */
++	0,		/* Clock enable mask */
++	190		/* Clock delay */
+ };
+ #endif
+ 
+@@ -208,7 +216,11 @@ static struct mv_ddr_topology_map board_topology_map_8g = {
+ 			MV_DDR_ODT_CFG_ALWAYS_ON,	/* odtcfg_write */
+ 			MV_DDR_ODT_CFG_NORMAL,		/* odtcfg_read */
+ 		},
+-	}
++	},
++	{0},	/* electrical parameters */
++	0,		/* ODT configuration */
++	0,		/* Clock enable mask */
++	190		/* Clock delay */
+ };
+ #endif
+ 
+-- 
+2.34.1
+

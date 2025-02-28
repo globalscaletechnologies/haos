@@ -1,0 +1,11 @@
+[connection]
+id=bridge-slave-lan3
+uuid=7aa86645-d4f7-4af3-8137-a38cd127027e
+type=ethernet
+interface-name=lan3
+master=br0
+slave-type=bridge
+
+[ethernet]
+
+[bridge-port]
